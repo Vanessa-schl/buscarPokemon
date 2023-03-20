@@ -1,0 +1,46 @@
+<!-- <h1>Lista de Pokémons</h1>
+
+<input type="text" [(ngModel)]="searchQuery" (input)="search()" placeholder="Pesquisar Pokémon">
+
+    <ul class="pokedex">
+        <li *ngFor="let pokemon of filteredList">
+            <a (click)="selectPokemon(pokemon)">{{ pokemon.nome }}</a>
+        </li>
+    </ul>
+
+
+
+
+    <div *ngIf="selectedPokemonDetails">
+        <h2>{{ selectedPokemonDetails.nome }}</h2>
+        <p>Height: {{ selectedPokemonDetails.peso }}</p>
+        <p>Abilities:</p>
+        <ul class="pokedex">
+            <li *ngFor="let ability of selectedPokemonDetails.habilidades">
+                {{ ability.habilidade.nome }}
+            </li>
+        </ul>
+    </div> -->
+    <div class="container">
+
+
+
+        <input type="text" [(ngModel)]="searchQuery" (input)="search()" placeholder="Search Pokemon">
+
+        <ul class="pokedex">
+            <li *ngFor="let pokemon of filteredList">
+                <a (click)="selectPokemon(pokemon)">{{ pokemon.name }}</a>
+            </li>
+        </ul>
+
+        <div *ngIf="selectedPokemonDetails">
+            <h2>{{ selectedPokemonDetails.name }}</h2>
+            <p>Height: {{ selectedPokemonDetails.height }}</p>
+            <p>Abilities:</p>
+            <ul class="pokedex">
+                <li *ngFor="let habilidade of selectedPokemonDetails.abilities">
+                    {{ habilidade.ability.name }}
+                </li>
+            </ul>
+        </div>
+    </div>
